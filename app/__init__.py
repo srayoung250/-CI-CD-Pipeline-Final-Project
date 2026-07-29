@@ -1,11 +1,15 @@
+import os
 from flask import Flask
 
 from app.extensions import db, ma, limiter, cache, swagger
 from app.swagger_definitions import swagger_template
-from config import DevelopmentConfig
+from config import DevelopmentConfig, ProductionConfig
 
 
-def create_app(config_class=DevelopmentConfig):
+def create_app(config_class=None):
+    if config_class is None:
+        flask_env = os.getenv("FLASK_ENV", "development")
+        config_class = ProductionConfig if flask_env == "production" else DevelopmentConfig
     app = Flask(__name__)
     app.config.from_object(config_class)
 
