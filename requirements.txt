@@ -1,0 +1,12 @@
+Flask
+Flask-SQLAlchemy
+flask-marshmallow
+marshmallow-sqlalchemy
+flasgger
+PyYAML
+Flask-Limiter
+Flask-Caching
+python-jose
+gunicorn
+psycopg2-binary
+python-dotenv
