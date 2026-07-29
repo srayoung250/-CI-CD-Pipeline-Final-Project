@@ -169,9 +169,9 @@ swagger_template = {
         },
         "version": "4.0.0",
     },
-    "host": "localhost:5000",
+    "host": "mechanic-shop-api-o2l5.onrender.com",
     "basePath": "/",
-    "schemes": ["http", "https"],
+    "schemes": ["https"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
     "securityDefinitions": {
