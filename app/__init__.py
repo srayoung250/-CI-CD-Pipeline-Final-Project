@@ -31,4 +31,7 @@ def create_app(config_class=None):
     app.register_blueprint(service_ticket_bp, url_prefix="/service-tickets")
     app.register_blueprint(inventory_bp, url_prefix="/inventory")
 
+    with app.app_context():
+        db.create_all()
+
     return app
